@@ -81,8 +81,8 @@ img{
     position: relative;
     padding: 100px 0px;
     padding-top: 150px;
-    background-image: url(/images/bg-section-bottom-desktop-1.svg),
-    url(/images/bg-section-top-desktop-1.svg);
+    background-image: url(./images/bg-section-bottom-desktop-1.svg),
+    url(./images/bg-section-top-desktop-1.svg);
                      
    background-position: left 0 bottom 0,
                         left 0 top 0;
@@ -133,7 +133,7 @@ img{
 }
 .finishing::before{
     position: absolute;
-    content: url(/images/bg-footer-top-desktop.svg);
+    content: url(./images/bg-footer-top-desktop.svg);
     top: 0;
     left: 0;
     width: 100%;
