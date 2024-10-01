@@ -380,6 +380,23 @@ body {
     width: 100%;
     margin: auto;
   }
+  .top_title {
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    height: auto;
+    align-items: flex-end;
+    font-size: 15px;
+    margin-top: 5px;
+  }
+  .top_title span {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+  .top_title img {
+    vertical-align: text-bottom;
+    width: 100%;
+  }
   .the_rabit {
     width: 100%;
     height: auto;
