@@ -401,22 +401,30 @@ body {
   .rabit_text span {
     font-size: 40px;
     color: white;
-    line-height: 0px;
+    line-height: normal;
     margin: 0;
     padding: 0;
   }
   .rabit_text strong {
-    font-size: 60px;
+    font-size: 50px;
     color: white;
   }
-
+  .rabit_image {
+    flex-basis: 1;
+    position: relative;
+  }
+  .rabit_image {
+    flex-basis: 30%;
+    position: relative;
+  }
   .rabit_image img {
     width: 100%;
-    position: relative;
+    /* position: relative; */
+    position: static;
     top: auto;
     left: auto;
-    margin-top: -40px;
-    margin-left: -70px;
+    margin-top: -10px;
+    margin-left: -10px;
   }
   .join_on {
     width: 100%;
