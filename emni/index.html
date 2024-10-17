@@ -23,25 +23,38 @@
             const hiddenDiv = document.getElementById('hiddenDiv');
             const padding = 50;
 
+            let lastPosition = { x: noButton.offsetLeft, y: noButton.offsetTop }; // Store the initial position
+
             noButton.addEventListener('mouseover', moveButton);
             noButton.addEventListener('click', moveButton);
 
             function moveButton() {
                 const containerWidth = document.body.clientWidth - padding * 2;
                 const containerHeight = document.body.clientHeight - padding * 2;
-                const randomX = Math.floor(Math.random() * (containerWidth - noButton.offsetWidth));
-                const randomY = Math.floor(Math.random() * (containerHeight - noButton.offsetHeight));
-                noButton.style.position = 'absolute';
-                noButton.style.left = `${randomX}px`;
-                noButton.style.top = `${randomY}px`;
-            }
+                let newPosition = { x: 0, y: 0 };
+                let distance = 0;
+                // Continue generating new positions until the distance is greater than 200px
+                while (distance < 200) {
+                    newPosition.x = Math.floor(Math.random() * (containerWidth - noButton.offsetWidth));
+                    newPosition.y = Math.floor(Math.random() * (containerHeight - noButton.offsetHeight));
+                    distance = Math.sqrt(Math.pow(newPosition.x - lastPosition.x, 2) + Math.pow(newPosition.y - lastPosition.y, 2));
+                }
 
+                // Apply the new position to the button
+                noButton.style.position = 'absolute';
+                noButton.style.left = `${newPosition.x}px`;
+                noButton.style.top = `${newPosition.y}px`;
+
+                // Update last position
+                lastPosition = newPosition;
+            }
 
             yesButton.addEventListener('click', () => {
                 yesButton.style.display = 'none';
                 noButton.style.display = 'none';
                 hiddenDiv.style.display = 'block';
             });
+
         </script>
 
     </body>
