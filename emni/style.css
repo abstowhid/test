@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+    min-width: 150px;
+}
+
+#yesButton {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    box-shadow: 0 5px 15px rgba(67, 233, 123, 0.3);
+}
+
+#yesButton:hover {
+    box-shadow: 0 8px 20px rgba(67, 233, 123, 0.5);
+    transform: translateY(-3px);
+}
+
+#noButton {
+    background: linear-gradient(135deg, #fa709a, #fee140);
+    box-shadow: 0 5px 15px rgba(250, 112, 154, 0.3);
+}
+
+#noButton:hover {
+    box-shadow: 0 8px 20px rgba(250, 112, 154, 0.5);
+    transform: translateY(-3px);
+}
+
+#hiddenDiv {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #86e7a6, #fef9f9);
+    color: #417516;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(114, 28, 36, 0.2);
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid rgba(114, 28, 36, 0.3);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 430px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    #hiddenDiv {
+        font-size: 16px;
+        padding: 15px;
+    }
+}

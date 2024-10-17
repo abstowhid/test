@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>emni</title>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h1>Do you like it?</h1>
+            <button id="yesButton">Yes</button>
+            <button id="noButton">No</button>
+            <div id="hiddenDiv">Hey! The 'No' button was not an option you should have tried!</div>
+        </div>
+
+        <script>
+            const noButton = document.getElementById('noButton');
+            const yesButton = document.getElementById('yesButton');
+            const hiddenDiv = document.getElementById('hiddenDiv');
+            const padding = 50;
+
+            noButton.addEventListener('mouseover', moveButton);
+            noButton.addEventListener('click', moveButton);
+
+            function moveButton() {
+                const containerWidth = document.body.clientWidth - padding * 2;
+                const containerHeight = document.body.clientHeight - padding * 2;
+                const randomX = Math.floor(Math.random() * (containerWidth - noButton.offsetWidth));
+                const randomY = Math.floor(Math.random() * (containerHeight - noButton.offsetHeight));
+                noButton.style.position = 'absolute';
+                noButton.style.left = `${randomX}px`;
+                noButton.style.top = `${randomY}px`;
+            }
+
+
+            yesButton.addEventListener('click', () => {
+                yesButton.style.display = 'none';
+                noButton.style.display = 'none';
+                hiddenDiv.style.display = 'block';
+            });
+        </script>
+
+    </body>
+
+</html>
