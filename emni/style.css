@@ -89,6 +89,8 @@ button {
 
     .container {
         padding: 20px;
+        width: 90%;
+        height: 230px;
     }
 
     h1 {
